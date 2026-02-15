@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Eye Talisman | Boutique Evil Eye Bracelets</title>
+  <meta name="description" content="Luxury boutique evil eye bracelets. Handmade in the UK. Limited runs, gift-ready packaging, designed to set." />
+  <style>
+    :root{
+      /* Luxury, warm neutrals that flatter your travel photos */
+      --bg: #0f1012;
+      --ink: #111214;
+      --paper: #fbf8f2;
+      --cream: #f4efe6;
+      --sand: #e8dcc7;
+      --taupe: #c9b79b;
+      --espresso: #2a2620;
+      --muted: rgba(17,18,20,.70);
+      --line: rgba(17,18,20,.10);
+      --shadow: 0 20px 60px rgba(0,0,0,.22);
+      --shadow2: 0 10px 30px rgba(0,0,0,.16);
+      --radius: 22px;
+      --radius2: 28px;
+      --max: 1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --accent: #b8a06b; /* warm gold */
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: var(--font);
+      background:
+        radial-gradient(1000px 650px at 15% 10%, rgba(184,160,107,.18), transparent 60%),
+        radial-gradient(900px 600px at 85% 15%, rgba(232,220,199,.45), transparent 58%),
+        linear-gradient(180deg, var(--paper), var(--cream));
+      color: var(--ink);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .wrap{max-width: var(--max); margin: 0 auto; padding: 18px 16px 72px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding: 10px 0 18px;
+      position: sticky; top: 0;
+      background: linear-gradient(180deg, rgba(251,248,242,.92), rgba(251,248,242,.78));
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      border-bottom: 1px solid rgba(17,18,20,.06);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 240px;
+    }
+    .mark{
+      width: 40px; height: 40px; border-radius: 14px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.8), transparent 55%),
+        linear-gradient(135deg, rgba(184,160,107,.9), rgba(232,220,199,.95));
+      box-shadow: var(--shadow2);
+      border: 1px solid rgba(17,18,20,.08);
+    }
+    .brandTitle{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .brandTitle strong{
+      font-family: var(--serif);
+      font-weight: 700;
+      letter-spacing: .2px;
+      font-size: 16px;
+    }
+    .brandTitle span{
+      font-size: 12px;
+      color: rgba(17,18,20,.65);
+      margin-top: 2px;
+      letter-spacing: .25px;
+    }
+
+    nav{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;}
+    .btn{
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,18,20,.12);
+      background: rgba(255,255,255,.45);
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 10px 22px rgba(0,0,0,.08);}
+    .btnPrimary{
+      border: 1px solid rgba(17,18,20,.10);
+      background: linear-gradient(135deg, rgba(184,160,107,.95), rgba(232,220,199,.92));
+      font-weight: 700;
+    }
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-top: 16px;
+    }
+    @media (max-width: 960px){
+      .hero{grid-template-columns: 1fr;}
+      header{position: static; backdrop-filter: none;}
+      .brand{min-width: unset;}
+    }
+
+    .heroCard{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(17,18,20,.10);
+      box-shadow: var(--shadow);
+      background: #fff;
+      position: relative;
+    }
+    .heroMedia{
+      position: relative;
+      height: 440px;
+      background: #ddd;
+    }
+    @media (max-width: 960px){ .heroMedia{height: 380px;} }
+    .heroMedia img{
+      width:100%; height:100%; object-fit: cover;
+      filter: contrast(1.02) saturate(1.02);
+    }
+    .heroOverlay{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(17,18,20,.08), rgba(17,18,20,.38) 70%, rgba(17,18,20,.58));
+      pointer-events:none;
+    }
+    .heroText{
+      position:absolute; left: 18px; right: 18px; bottom: 16px;
+      color: #fff;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size: 12px;
+      letter-spacing: .45px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.88);
+      background: rgba(17,18,20,.24);
+      border: 1px solid rgba(255,255,255,.16);
+      padding: 8px 10px;
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+    }
+    .kDot{
+      width: 6px; height: 6px; border-radius: 99px;
+      background: rgba(184,160,107,.95);
+      box-shadow: 0 0 0 4px rgba(184,160,107,.25);
+    }
+    .heroText h1{
+      margin: 10px 0 8px;
+      font-family: var(--serif);
+      font-size: 44px;
+      line-height: 1.03;
+      letter-spacing: .2px;
+    }
+    .heroText p{
+      margin: 0 0 14px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(255,255,255,.88);
+      max-width: 52ch;
+    }
+    .heroActions{
+      display:flex; gap:10px; flex-wrap: wrap;
+    }
+    .heroActions .btn{
+      background: rgba(255,255,255,.88);
+      border-color: rgba(255,255,255,.22);
+    }
+    .heroActions .btnPrimary{
+      background: linear-gradient(135deg, rgba(184,160,107,.96), rgba(232,220,199,.95));
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .sideCard{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(17,18,20,.10);
+      box-shadow: var(--shadow2);
+      background: rgba(255,255,255,.78);
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      overflow:hidden;
+    }
+    .sideCard:before{
+      content:"";
+      position:absolute; inset:-120px auto auto -140px;
+      width: 260px; height: 260px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, rgba(184,160,107,.18), transparent 60%);
+      filter: blur(2px);
+      pointer-events:none;
+    }
+    .sideTitle{
+      font-family: var(--serif);
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: .15px;
+    }
+    .sideList{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(17,18,20,.70);
+      line-height: 1.65;
+      font-size: 13px;
+    }
+    .pillRow{display:flex;gap:10px;flex-wrap:wrap;margin-top: 6px;}
+    .pill{
+      font-size: 12px;
+      color: rgba(17,18,20,.72);
+      border: 1px solid rgba(17,18,20,.12);
+      background: rgba(255,255,255,.65);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+    .divider{height:1px;background: rgba(17,18,20,.08); margin: 6px 0;}
+
+    /* Sections */
+    .section{
+      margin-top: 26px;
+    }
+    .sectionHead{
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap: 12px; flex-wrap:wrap;
+      margin-bottom: 12px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-family: var(--serif);
+      font-size: 22px;
+      letter-spacing: .2px;
+    }
+    .sectionHead .note{
+      font-size: 13px;
+      color: rgba(17,18,20,.62);
+    }
+
+    .productGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 980px){
+      .productGrid{grid-template-columns: 1fr;}
+    }
+
+    .product{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(17,18,20,.10);
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow2);
+      display:flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .productMedia{position:relative;height: 240px;background:#ddd;}
+    .productMedia img{width:100%;height:100%;object-fit:cover;}
+    .tag{
+      position:absolute; top: 12px; left: 12px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(17,18,20,.10);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: .25px;
+      color: rgba(17,18,20,.75);
+      backdrop-filter: blur(10px);
+    }
+    .productBody{padding: 16px; display:flex; flex-direction:column; gap: 10px;}
+    .row{
+      display:flex; justify-content:space-between; align-items:flex-start; gap: 10px;
+    }
+    .productBody h3{
+      margin:0;
+      font-family: var(--serif);
+      font-size: 18px;
+      letter-spacing: .15px;
+    }
+    .price{
+      margin:0;
+      font-weight: 800;
+      color: rgba(17,18,20,.82);
+      font-size: 16px;
+    }
+    .desc{
+      margin:0;
+      color: rgba(17,18,20,.68);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .miniPills{display:flex; gap: 8px; flex-wrap:wrap;}
+    .miniPills span{
+      font-size: 12px;
+      color: rgba(17,18,20,.70);
+      border: 1px solid rgba(17,18,20,.10);
+      background: rgba(244,239,230,.75);
+      padding: 7px 9px;
+      border-radius: 999px;
+    }
+    .productActions{display:flex;gap:10px;flex-wrap:wrap;margin-top: 4px;}
+    .productActions a{flex: 0 0 auto;}
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 980px){ .gallery{grid-template-columns: 1fr;} }
+    .galleryMain, .gallerySet{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border: 1px solid rgba(17,18,20,.10);
+      box-shadow: var(--shadow2);
+      background:#fff;
+    }
+    .galleryMain{height: 380px; position:relative;}
+    .galleryMain img{width:100%;height:100%;object-fit:cover;}
+    .gallerySet{display:grid; grid-template-rows: 1fr 1fr; gap: 0; height: 380px;}
+    .gallerySet > div{position:relative;}
+    .gallerySet img{width:100%;height:100%;object-fit:cover;}
+    .galleryCap{
+      position:absolute; left: 12px; bottom: 12px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(17,18,20,.10);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: rgba(17,18,20,.70);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Order / form */
+    .order{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 980px){ .order{grid-template-columns: 1fr;} }
+
+    .card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(17,18,20,.10);
+      box-shadow: var(--shadow2);
+      background: rgba(255,255,255,.82);
+      padding: 18px;
+      overflow:hidden;
+      position:relative;
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+    .card p{margin:0 0 12px;color: rgba(17,18,20,.68);font-size:13px;line-height:1.6;}
+
+    form{display:grid; gap: 10px; margin-top: 8px;}
+    input, select, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(17,18,20,.12);
+      background: rgba(255,255,255,.78);
+      font-family: var(--font);
+      font-size: 14px;
+      outline: none;
+    }
+    textarea{min-height: 110px; resize: vertical;}
+    .hint{font-size:12px;color: rgba(17,18,20,.56);}
+
+    footer{
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(17,18,20,.08);
+      display:flex; justify-content:space-between; gap: 10px; flex-wrap:wrap;
+      color: rgba(17,18,20,.60);
+      font-size: 12px;
+    }
+    .link{ text-decoration: underline; text-underline-offset: 3px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brandTitle">
+          <strong>The Eye Talisman</strong>
+          <span>Handmade boutique bracelets • UK dispatch</span>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn" href="#shop">Shop</a>
+        <a class="btn" href="#gallery">Gallery</a>
+        <a class="btn" href="#custom">Custom</a>
+        <a class="btn btnPrimary" href="https://instagram.com/YOUR_INSTAGRAM_HERE" target="_blank" rel="noreferrer">Order on Instagram</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="heroCard">
+        <div class="heroMedia">
+          <!-- HERO IMAGE: Clean view of bracelets -->
+          <img src="talisman-sand.jpg" alt="The Eye Talisman bracelets photographed on sand" />
+        </div>
+      </div>
+
+      <aside class="sideCard">
+        <div class="kicker" style="margin-bottom: 12px;"><span class="kDot"></span> LIMITED RUNS • GIFT-READY</div>
+        <h1 style="font-family: var(--serif); font-size: 32px; margin: 0 0 12px; line-height: 1.1;">Luxury talismans designed to layer beautifully.</h1>
+        <p style="margin: 0 0 18px; line-height: 1.6; color: rgba(17,18,20,.75);">
+          Premium glass evil-eye beads, polished metal spacers and a clean boutique finish.
+          Designed to look effortless — from city nights to beach days.
+        </p>
+        
+        <h2 class="sideTitle">What makes it boutique</h2>
+        <ul class="sideList">
+          <li><strong>Premium glass beads</strong> with a crisp "eye" detail.</li>
+          <li><strong>Comfort fit</strong> made to sit cleanly on the wrist.</li>
+          <li><strong>Gift-ready</strong> packaging (pouch + care card).</li>
+          <li><strong>Limited batches</strong> — colours rotate with availability.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="pillRow">
+          <span class="pill">Single £22</span>
+          <span class="pill">2-piece £34</span>
+          <span class="pill">3-piece £44</span>
+        </div>
+
+        <p class="hint" style="margin:0;">
+          Tip: once you're ready for checkout, swap "Order on Instagram" for Shopify/Stripe buttons.
+        </p>
+      </aside>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop" class="section" aria-label="Shop">
+      <div class="sectionHead">
+        <h2>Shop</h2>
+        <div class="note">Choose a tier • Select size (S/M/L) • Order by DM</div>
+      </div>
+
+      <div class="productGrid">
+        <!-- Product 1: 2-piece set (two wrists photo) -->
+        <article class="product">
+          <div class="productMedia">
+            <img src="talisman-duo.jpg" alt="Talisman Duo bracelet set on wrist" />
+            <div class="tag">Best seller • 2-piece</div>
+          </div>
+          <div class="productBody">
+            <div class="row">
+              <h3>Talisman Duo</h3>
+              <p class="price">£34</p>
+            </div>
+            <p class="desc">
+              Warm amber tones with boutique gold accents — the balanced set that goes with everything.
+            </p>
+            <div class="miniPills">
+              <span>2 bracelets</span><span>Gift-ready</span><span>Comfort fit</span>
+            </div>
+            <div class="productActions">
+              <a class="btn btnPrimary" href="#custom">Order / customise</a>
+              <a class="btn" href="https://instagram.com/YOUR_INSTAGRAM_HERE" target="_blank" rel="noreferrer">DM to buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Yellow set (hanging photo) -->
+        <article class="product">
+          <div class="productMedia">
+            <img src="talisman-yellow.jpg" alt="Golden Eye set photographed outdoors" />
+            <div class="tag">Signature • Limited run</div>
+          </div>
+          <div class="productBody">
+            <div class="row">
+              <h3>Golden Eye Set</h3>
+              <p class="price">£44</p>
+            </div>
+            <p class="desc">
+              A bright, elevated statement set — designed for holiday light and everyday layering.
+            </p>
+            <div class="miniPills">
+              <span>3-piece vibe</span><span>Premium glass</span><span>Limited</span>
+            </div>
+            <div class="productActions">
+              <a class="btn btnPrimary" href="#custom">Order / customise</a>
+              <a class="btn" href="https://instagram.com/YOUR_INSTAGRAM_HERE" target="_blank" rel="noreferrer">DM to buy</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: Use the sand photo again for “single”, or swap to a single shot later -->
+        <article class="product">
+          <div class="productMedia">
+            <img src="talisman-sand.jpg" alt="Bracelets photographed on sand" />
+            <div class="tag">Everyday • Single</div>
+          </div>
+          <div class="productBody">
+            <div class="row">
+              <h3>Charmed Single</h3>
+              <p class="price">£22</p>
+            </div>
+            <p class="desc">
+              The perfect everyday talisman — layer with a watch or wear solo for a clean look.
+            </p>
+            <div class="miniPills">
+              <span>Single</span><span>£22</span><span>Giftable</span>
+            </div>
+            <div class="productActions">
+              <a class="btn btnPrimary" href="#custom">Order / colours</a>
+              <a class="btn" href="https://instagram.com/YOUR_INSTAGRAM_HERE" target="_blank" rel="noreferrer">DM to buy</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section" aria-label="Gallery">
+      <div class="sectionHead">
+        <h2>Gallery</h2>
+        <div class="note">Lifestyle-first • Designed to feel like a holiday</div>
+      </div>
+
+      <div class="gallery">
+        <div class="galleryMain">
+          <img src="talisman-duo.jpg" alt="Talisman Duo lifestyle wrist shot" />
+          <div class="galleryCap">Boutique sets • real life</div>
+        </div>
+
+        <div class="gallerySet">
+          <div>
+            <img src="talisman-yellow.jpg" alt="Golden Eye set photographed outdoors" />
+            <div class="galleryCap">Signature colour story</div>
+          </div>
+          <div>
+            <img src="talisman-sand.jpg" alt="Bracelets on sand" />
+            <div class="galleryCap">Summer-ready styling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOM / ORDER -->
+    <section id="custom" class="section" aria-label="Custom order">
+      <div class="sectionHead">
+        <h2>Custom orders</h2>
+        <div class="note">Start with DM orders • Add checkout later</div>
+      </div>
+
+      <div class="order">
+        <div class="card">
+          <h3>Create your order</h3>
+          <p>
+            Choose a tier + size + vibe and we’ll reply with options and a payment link.
+            (For now you can take payment via invoice/PayPal/Stripe — or move to Shopify when ready.)
+          </p>
+
+          <form onsubmit="return false;">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Email" required />
+
+            <select required>
+              <option value="">Choose tier</option>
+              <option>Single (£22)</option>
+              <option>2-piece set (£34)</option>
+              <option>3-piece set (£44)</option>
+            </select>
+
+            <select required>
+              <option value="">Wrist size</option>
+              <option>Small (14–15 cm)</option>
+              <option>Medium (16–17 cm)</option>
+              <option>Large (18–19 cm)</option>
+            </select>
+
+            <select required>
+              <option value="">Colour vibe</option>
+              <option>Amber / warm tones</option>
+              <option>Yellow / sunshine</option>
+              <option>Colour-pop / mixed</option>
+              <option>Monochrome / minimal</option>
+           
